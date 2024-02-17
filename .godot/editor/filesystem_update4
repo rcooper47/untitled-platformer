@@ -1,1 +1,3 @@
 res://level.tscn
+res://EnemyMovement.gd
+res://EnemyMovement2.gd
