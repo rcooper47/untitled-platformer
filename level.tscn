@@ -17073,13 +17073,84 @@ sources/0 = SubResource("TileSetAtlasSource_va1rx")
 tile_set = SubResource("TileSet_3ea63")
 format = 2
 
-[node name="Griund Tile" parent="." instance=ExtResource("2_aokib")]
-position = Vector2(0, 608)
-scale = Vector2(15, 1)
+[node name="Environment" type="Node2D" parent="."]
 
-[node name="Griund Tile2" parent="." instance=ExtResource("2_aokib")]
-position = Vector2(680, 608)
-scale = Vector2(10, 1)
-
-[node name="Griund Tile3" parent="." instance=ExtResource("2_aokib")]
+[node name="Floor" type="Node2D" parent="Environment"]
 position = Vector2(408, 568)
+
+[node name="Griund Tile" parent="Environment/Floor" instance=ExtResource("2_aokib")]
+position = Vector2(-408, 40)
+scale = Vector2(27, 5)
+
+[node name="Griund Tile2" parent="Environment/Floor" instance=ExtResource("2_aokib")]
+position = Vector2(824, 40)
+scale = Vector2(70, 5)
+
+[node name="Floating Platforms" type="Node2D" parent="Environment"]
+position = Vector2(0, -48)
+
+[node name="Griund Tile" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(152, 472)
+
+[node name="Griund Tile2" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(288, 472)
+scale = Vector2(5, 1)
+
+[node name="Griund Tile3" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(368, 328)
+
+[node name="Griund Tile4" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(856, 472)
+scale = Vector2(3, 1)
+
+[node name="Griund Tile5" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(968, 328)
+scale = Vector2(5, 1)
+
+[node name="Griund Tile6" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1264, 328)
+scale = Vector2(4, 1)
+
+[node name="Griund Tile7" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1384, 472)
+
+[node name="Griund Tile8" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1584, 472)
+scale = Vector2(2, 1)
+
+[node name="Griund Tile9" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1824, 472)
+
+[node name="Griund Tile10" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1968, 472)
+
+[node name="Griund Tile11" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(2112, 472)
+
+[node name="Griund Tile12" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(1968, 328)
+
+[node name="Griund Tile13" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(2344, 472)
+
+[node name="Griund Tile14" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(2472, 328)
+scale = Vector2(3, 1)
+
+[node name="Griund Tile15" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(2752, 328)
+scale = Vector2(4, 1)
+
+[node name="Griund Tile16" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
+position = Vector2(2792, 472)
+scale = Vector2(2, 1)
+
+[node name="Grounded Obstacles" type="Node2D" parent="Environment"]
+
+[node name="Griund Tile" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(664, 528)
+scale = Vector2(1.5, 2)
+
+[node name="Griund Tile2" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+visible = false
+position = Vector2(2800, 520)
