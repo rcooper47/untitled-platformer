@@ -17069,7 +17069,8 @@ texture = ExtResource("1_m2rko")
 [sub_resource type="TileSet" id="TileSet_3ea63"]
 sources/0 = SubResource("TileSetAtlasSource_va1rx")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_oa2kh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqk2w"]
+size = Vector2(12, 16)
 
 [node name="Node2D" type="Node2D"]
 
@@ -17221,15 +17222,17 @@ scale = Vector2(5, 1)
 position = Vector2(4360, 568)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(48, 560)
+position = Vector2(32, 576)
 scale = Vector2(2, 2)
 script = ExtResource("3_3bjr4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(2, 2)
-shape = SubResource("CircleShape2D_oa2kh")
+shape = SubResource("RectangleShape2D_iqk2w")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(-4.76837e-07, -12)
 scale = Vector2(0.21875, 0.214844)
 texture = ExtResource("3_oo8o6")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
