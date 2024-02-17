@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmwkncwdeqqpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0qhe"]
+
+[node name="Griund Tile" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0470588, 0.937255, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_w0qhe")
