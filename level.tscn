@@ -17084,7 +17084,7 @@ scale = Vector2(27, 5)
 
 [node name="Griund Tile2" parent="Environment/Floor" instance=ExtResource("2_aokib")]
 position = Vector2(824, 40)
-scale = Vector2(70, 5)
+scale = Vector2(90, 5)
 
 [node name="Floating Platforms" type="Node2D" parent="Environment"]
 position = Vector2(0, -48)
@@ -17152,5 +17152,66 @@ position = Vector2(664, 528)
 scale = Vector2(1.5, 2)
 
 [node name="Griund Tile2" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
-visible = false
-position = Vector2(2800, 520)
+position = Vector2(3072, 568)
+scale = Vector2(4, 1)
+
+[node name="Griund Tile3" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3112, 528)
+scale = Vector2(3, 1)
+
+[node name="Griund Tile4" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3152, 488)
+scale = Vector2(2, 1)
+
+[node name="Griund Tile5" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3192, 448)
+
+[node name="Griund Tile6" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3328, 568)
+scale = Vector2(4, 1)
+
+[node name="Griund Tile7" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3328, 528)
+scale = Vector2(3, 1)
+
+[node name="Griund Tile8" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3328, 488)
+scale = Vector2(2, 1)
+
+[node name="Griund Tile9" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3328, 448)
+
+[node name="Griund Tile10" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3656, 568)
+scale = Vector2(9, 1)
+
+[node name="Griund Tile11" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3696, 528)
+scale = Vector2(8, 1)
+
+[node name="Griund Tile12" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3736, 488)
+scale = Vector2(7, 1)
+
+[node name="Griund Tile13" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3776, 448)
+scale = Vector2(6, 1)
+
+[node name="Griund Tile14" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3856, 368)
+scale = Vector2(4, 1)
+
+[node name="Griund Tile15" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3896, 328)
+scale = Vector2(3, 1)
+
+[node name="Griund Tile16" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3936, 288)
+scale = Vector2(2, 1)
+
+[node name="Griund Tile17" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(3816, 408)
+scale = Vector2(5, 1)
+
+[node name="Griund Tile18" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
+position = Vector2(4360, 568)
