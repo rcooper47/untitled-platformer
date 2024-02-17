@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckj06atgu0f2l"]
+[gd_scene load_steps=8 format=3 uid="uid://ckj06atgu0f2l"]
 
 [ext_resource type="Texture2D" uid="uid://c6i0mvmwqmn3v" path="res://Assets/Platformer Pack Redux/Spritesheets/spritesheet_complete.png" id="1_m2rko"]
 [ext_resource type="PackedScene" uid="uid://cmwkncwdeqqpc" path="res://Tile.tscn" id="2_aokib"]
+[ext_resource type="Script" path="res://PlayerMovement.gd" id="3_3bjr4"]
+[ext_resource type="Texture2D" uid="uid://cwslmkwh4ryo" path="res://Assets/Platformer Pack Redux/PNG/Players/128x256/Pink/alienPink_front.png" id="3_oo8o6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_va1rx"]
 texture = ExtResource("1_m2rko")
@@ -17067,6 +17069,8 @@ texture = ExtResource("1_m2rko")
 [sub_resource type="TileSet" id="TileSet_3ea63"]
 sources/0 = SubResource("TileSetAtlasSource_va1rx")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_oa2kh"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -17090,65 +17094,65 @@ scale = Vector2(90, 5)
 position = Vector2(0, -48)
 
 [node name="Griund Tile" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(152, 472)
+position = Vector2(152, 524)
 
 [node name="Griund Tile2" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(288, 472)
+position = Vector2(288, 524)
 scale = Vector2(5, 1)
 
 [node name="Griund Tile3" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(368, 328)
+position = Vector2(368, 417)
 
 [node name="Griund Tile4" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(856, 472)
+position = Vector2(856, 524)
 scale = Vector2(3, 1)
 
 [node name="Griund Tile5" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(968, 328)
+position = Vector2(968, 417)
 scale = Vector2(5, 1)
 
 [node name="Griund Tile6" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1264, 328)
+position = Vector2(1264, 417)
 scale = Vector2(4, 1)
 
 [node name="Griund Tile7" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1384, 472)
+position = Vector2(1384, 524)
 
 [node name="Griund Tile8" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1584, 472)
+position = Vector2(1584, 524)
 scale = Vector2(2, 1)
 
 [node name="Griund Tile9" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1824, 472)
+position = Vector2(1824, 524)
 
 [node name="Griund Tile10" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1968, 472)
+position = Vector2(1968, 524)
 
 [node name="Griund Tile11" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(2112, 472)
+position = Vector2(2112, 524)
 
 [node name="Griund Tile12" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(1968, 328)
+position = Vector2(1968, 417)
 
 [node name="Griund Tile13" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(2344, 472)
+position = Vector2(2344, 524)
 
 [node name="Griund Tile14" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(2472, 328)
+position = Vector2(2472, 417)
 scale = Vector2(3, 1)
 
 [node name="Griund Tile15" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(2752, 328)
+position = Vector2(2752, 417)
 scale = Vector2(4, 1)
 
 [node name="Griund Tile16" parent="Environment/Floating Platforms" instance=ExtResource("2_aokib")]
-position = Vector2(2792, 472)
+position = Vector2(2792, 524)
 scale = Vector2(2, 1)
 
 [node name="Grounded Obstacles" type="Node2D" parent="Environment"]
 
 [node name="Griund Tile" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
-position = Vector2(664, 528)
+position = Vector2(664, 536)
 scale = Vector2(1.5, 2)
 
 [node name="Griund Tile2" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
@@ -17215,3 +17219,17 @@ scale = Vector2(5, 1)
 
 [node name="Griund Tile18" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
 position = Vector2(4360, 568)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(48, 560)
+scale = Vector2(2, 2)
+script = ExtResource("3_3bjr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_oa2kh")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-4.76837e-07, -12)
+scale = Vector2(0.21875, 0.214844)
+texture = ExtResource("3_oo8o6")
