@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://crcfexg2grbxp"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ub3ym"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ub3ym")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.521569, 0.521569, 0.521569, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_right = 1024
+theme_override_constants/margin_bottom = 656
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Untitled Platformer"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="startButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "START"
+
+[connection signal="button_up" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer/startButton" to="." method="_on_start_button_button_up"]
