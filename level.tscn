@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckj06atgu0f2l"]
+[gd_scene load_steps=5 format=3 uid="uid://ckj06atgu0f2l"]
 
 [ext_resource type="Texture2D" uid="uid://c6i0mvmwqmn3v" path="res://Assets/Platformer Pack Redux/Spritesheets/spritesheet_complete.png" id="1_m2rko"]
 [ext_resource type="PackedScene" uid="uid://cmwkncwdeqqpc" path="res://Tile.tscn" id="2_aokib"]
-[ext_resource type="Script" path="res://PlayerMovement.gd" id="3_2aex0"]
-[ext_resource type="Texture2D" uid="uid://cwslmkwh4ryo" path="res://Assets/Platformer Pack Redux/PNG/Players/128x256/Pink/alienPink_front.png" id="4_delyb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_va1rx"]
 texture = ExtResource("1_m2rko")
@@ -17069,9 +17067,6 @@ texture = ExtResource("1_m2rko")
 [sub_resource type="TileSet" id="TileSet_3ea63"]
 sources/0 = SubResource("TileSetAtlasSource_va1rx")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gx4ky"]
-size = Vector2(24, 38.1818)
-
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -17082,22 +17077,6 @@ format = 2
 
 [node name="Floor" type="Node2D" parent="Environment"]
 position = Vector2(408, 568)
-
-
-[node name="PlayerNode" type="CharacterBody2D" parent="."]
-position = Vector2(72, 584)
-script = ExtResource("3_2aex0")
-
-[node name="Sprite2D" type="Sprite2D" parent="PlayerNode"]
-position = Vector2(-56, -12)
-scale = Vector2(0.25, 0.28125)
-texture = ExtResource("4_delyb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode"]
-position = Vector2(-56, 3)
-scale = Vector2(1.1, 1.1)
-shape = SubResource("RectangleShape2D_gx4ky")
-debug_color = Color(0.839216, 0.329412, 0.517647, 0.419608)
 
 [node name="Griund Tile" parent="Environment/Floor" instance=ExtResource("2_aokib")]
 position = Vector2(-408, 40)
@@ -17175,4 +17154,3 @@ scale = Vector2(1.5, 2)
 [node name="Griund Tile2" parent="Environment/Grounded Obstacles" instance=ExtResource("2_aokib")]
 visible = false
 position = Vector2(2800, 520)
-
