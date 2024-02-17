@@ -1,1 +1,4 @@
 res://level.tscn
+res://Tile.tscn
+res://PlayerMovement.gd
+res://FallDetection.gd
